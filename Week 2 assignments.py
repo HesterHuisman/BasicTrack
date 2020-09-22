@@ -17,7 +17,7 @@ print(bruce + 4)
 
 # 2.5
 P = float(input("Please enter the principle amount: "))
-r = float(input("Please ente r the annual nominal interest rate: "))
+r = float(input("Please enter the annual nominal interest rate: "))
 n = float(input("Please enter the number of times the interest is compounded per year: "))
 t = float(input("Please enter the number of years: "))
 
@@ -33,3 +33,33 @@ Hours = int(input("Please enter the number of hours to wait: "))
 
 End_time = (Start_time + (Hours % 24))
 print(End_time)
+
+
+# Travel model
+D = int(input("Please enter the distance in whole km: "))
+M = input("Please enter the mode of transportation: walking/biking/car: ")
+
+#speed
+if M == "walking":
+    Speed = 20
+elif M == "biking":
+    Speed = 5
+else:
+    Speed = 1
+Speed = int(Speed)
+
+# total time
+Parking_Car = input("Please enter how many minutes it takes to park the car: ")
+Parking_Bike = input("Please enter how many minutes it takes park the bike: ")
+
+if M == "walking":
+    Total = D*Speed
+elif M == "biking":
+    Total = D*Speed
+else:
+    Total = D*Speed
+Total = int(Total)
+
+Hours = (Total//60)
+Minutes = (Total % 60)
+print(Hours, "hours and", Minutes, "minutes")
