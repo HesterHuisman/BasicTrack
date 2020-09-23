@@ -34,7 +34,6 @@ Hours = int(input("Please enter the number of hours to wait: "))
 End_time = (Start_time + (Hours % 24))
 print(End_time)
 
-
 # Travel model
 D = int(input("Please enter the distance in whole km: "))
 M = input("Please enter the mode of transportation: walking/biking/car: ")
@@ -49,16 +48,15 @@ else:
 Speed = int(Speed)
 
 # total time
-Parking_Car = input("Please enter how many minutes it takes to park the car: ")
-Parking_Bike = input("Please enter how many minutes it takes park the bike: ")
+Parking_Car = int(input("Please enter how many minutes it takes to park the car: "))
+Parking_Bike = int(input("Please enter how many minutes it takes park the bike: "))
 
 if M == "walking":
     Total = D*Speed
 elif M == "biking":
-    Total = D*Speed
+    Total = D*Speed + Parking_Bike
 else:
-    Total = D*Speed
-Total = int(Total)
+    Total = D*Speed + Parking_Car
 
 Hours = (Total//60)
 Minutes = (Total % 60)
