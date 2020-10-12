@@ -4,11 +4,13 @@ def remove(part, word):
     m = len(part)
     new_word = ""
     while True:
-        part in word
-        part1 = word[:n]
-        part2 = word[m+1:]
-        new_word = part1 + part2
-        word = new_word
+        if word.find(part) >= 0:
+            part1 = word[:n]
+            part2 = word[m+1:]
+            new_word = part1 + part2
+            word = new_word
+        else:
+            new_word = word
         if part not in word:
             break
     new_word = word
@@ -19,4 +21,3 @@ print(remove("an", "banana"))
 print(remove("cyc", "bicycle"))
 print(remove("iss", "Mississippi"))
 print(remove("eggs", "bicycle"))
-# last one is not working :(
